@@ -37,6 +37,6 @@ app.get("/join", function(req, res){
 
 //Deploying Server
 var port = 3000;
-app.listen(port||process.env.PORT, function(req, res){
+app.listen(port, function(req, res){
   console.log("Server Up and Running at"+" "+port);
 })
