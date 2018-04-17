@@ -1,0 +1,16 @@
+{
+  "name": "cama",
+  "version": "1.0.0",
+  "description": "Cama is a youth led initiative providing free college application advice to African high school students",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CAMA",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3"
+  }
+}
