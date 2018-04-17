@@ -36,7 +36,7 @@ app.get("/join", function(req, res){
 //*** End of Routes ***//
 
 //Deploying Server
-var port = 3000;
-app.listen(port, function(req, res){
-  console.log("Server Up and Running at"+" "+port);
+
+app.listen(process.env.PORT || 3001, function(req, res){
+  console.log("Server Up and Running at 3001");
 })
