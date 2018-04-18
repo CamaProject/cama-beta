@@ -125,6 +125,10 @@ app.get("/mentees/previous", function(){
 //End of Mentors //
 
 
+app.get("/contactus", function(req, res){
+  res.render("contact-us");
+});
+
 //*** End of Routes ***//
 
 

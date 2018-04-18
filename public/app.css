@@ -74,8 +74,10 @@ footer{
   color: white;
   background-color: black;
 }
+
 .subscribe{
   background-color: inherit;
   border-radius: 10px;
   margin-bottom: 5%;
+  background-color: #DCDCDC	;
 }
