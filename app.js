@@ -24,9 +24,9 @@ app.get("/executives", function(req, res){
 });
 
 //Going to Mentors
-app.get("/mentors", function(req, res){
+/*app.get("/mentors", function(req, res){
   res.render("mentors");
-});
+}); */
 
 //Going To Join
 app.get("/join", function(req, res){
