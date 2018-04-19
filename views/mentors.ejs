@@ -15,10 +15,10 @@
      </div>
 
          <div class="card-container">
-
+                          <!-- For Loop To Stored output THE Mentors -->
           <% for(var counter = 0 ; counter < mentorList.length ; counter++ ) { %>
 
-            <div style="width: 30%; margin-left:1%; margin-bottom:1%; display:inline-block; margin-bottom:2%; margin-top:0.5%;">
+            <div class="" style="width: 30%; margin-left:1%; margin-bottom:1%; display:inline-block; margin-bottom:2%; margin-top:0.5%;">
 
                 <div class="card-container" style=" padding:5%;" >
 
@@ -30,8 +30,8 @@
 
                             <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
 
-                              <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 200)%>.....</p>
-                              <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#<%= mentorList[counter].name %>">Read All</button>
+                              <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
+                              <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#<%= mentorList[counter].name %>">Read More</button>
                               <div id="<%= mentorList[counter].name %>" class="collapse">
                                 <p align="justify"><%= mentorList[counter].bio %></p>
                               </div>

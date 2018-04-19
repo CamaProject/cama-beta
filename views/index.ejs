@@ -7,7 +7,7 @@
             <div class="intro-text">
                 <div class="intro-heading">COLLEGE ADMISSIONS MENTORS FOR AFRICA</div>
                 <div class="intro-lead-in">We're a youth led initiative providing free college application advice to African high school students</div>
-                <a href="#about" class="page-scroll btn btn-xl">Contact Us</a>
+                <a href="/contactus" class="page-scroll btn btn-xl">Contact Us</a>
 				<a href="https://www.facebook.com/CAMAafrica/" class="page-scroll btn btn-xl" target="_blank">Follow Us</a>
             </div>
         </div>
@@ -42,50 +42,6 @@
 
 
 <!-- EJS For Mentors -->
-    <!-- Team Section -->
-
-<div class="mentors-row-container">
-    <div class="container">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                  <h2 class="section-heading">Our Amazing Community</h2>
-                  <h3 class="section-subheading text-muted">CAMA's Community of Mentors, Professionals, and Project Ideators.</h3>
-              </div>
-          </div>
-     </div>
-
-         <div class="card-container">
-
-          <% for(var counter = 0 ; counter < mentorList.length ; counter++ ) { %>
-
-            <div style="width: 30%; margin-left:1%; margin-bottom:1%; display:inline-block; margin-bottom:2%; margin-top:0.5%;">
-
-                <div class="card-container" style=" padding:5%;" >
-
-                    <img class="card-img-top img-responsive img-circle" src="<%= mentorList[counter].image %>" width="260px" height="260px" alt="Card image cap">
-
-                        <div class="card-body">
-                            <h4> <%=mentorList[counter].name %> </h4>
-                            <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
-
-                            <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
-
-                              <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 200)%>.....</p>
-                              <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#<%= mentorList[counter].name %>">Read All</button>
-                              <div id="<%= mentorList[counter].name %>" class="collapse">
-                                <p align="justify"><%= mentorList[counter].bio %></p>
-                              </div>
-
-                              <% } %>
-                        </div>
-                </div>
-
-            </div>
-
-         <% }  %>
-
-        </div>
-</div>
 
 <!--End of Mentors -->
 
@@ -108,7 +64,7 @@
                 <a href="https://goo.gl/forms/hrz7CJPqTc4PofqO2">
                 <h4 class="service-heading">Become A Mentee</h4>
       </a>
-                <p class="text-muted">Receive mentorship and guidance about the application process, as well as helpful advice about the transition to college from students in top universities and colleges all around the world! And become a part of the respective African Student Organizations at your choice school even before you get there!
+                <p class="text-muted" align="justify">Receive mentorship and guidance about the application process, as well as helpful advice about the transition to college from students in top universities and colleges all around the world! And become a part of the respective African Student Organizations at your choice school even before you get there!
                 <br>
 
                 <a href="Mentee_Contract.html" target="_blank">See Mentee Contract</a>
@@ -126,7 +82,7 @@
                 <a href="https://goo.gl/forms/w7pOlM0dJaoafK7x2">
                 <h4 class="service-heading">Become A Mentor</h4>
       </a>
-                <p class="text-muted">Establish relationships with hard working and motivated African students from every part of the continent, assist them through the college application process and join a growing network of students and professionals who demonstrate the potential to bring about positive change on the African continent. Stay connected with African student organisations from all around the world!
+                <p class="text-muted"align="justify">Establish relationships with hard working and motivated African students from every part of the continent, assist them through the college application process and join a growing network of students and professionals who demonstrate the potential to bring about positive change on the African continent. Stay connected with African student organisations from all around the world!
               <br>
 
                 <a href="Mentor_Contract.html" target="_blank">See Mentor Contract</a>
@@ -146,7 +102,7 @@
       <a href="https://goo.gl/forms/bNAx99cwRPFvbxF92">
                 <h4 class="service-heading">Become A Partner</h4>
       </a>
-                <p class="text-muted">Join our continually expanding community of African student organisations, educational institutions and sponsors, working together to support Africa’s next generation of leaders, innovators, and change-makers.
+                <p class="text-muted" align="justify">Join our continually expanding community of African student organisations, educational institutions and sponsors, working together to support Africa’s next generation of leaders, innovators, and change-makers.
 </p>
             </div>
         </div>
