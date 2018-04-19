@@ -10,111 +10,45 @@
 
 
     <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
+
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">THE EXECUTIVE TEAM</h2>
                     <h3 class="section-subheading text-muted">Meet CAMA's Executive Team.</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/executive/Cynthia.PNG" class="img-responsive img-circle" alt="" width="260px" height="260px" >
-                        <h3>Cynthia</h3>
-                        <p class="text-muted">Rwanda</p>
-                        <h4>President</h4><br><br>
-                        <p class="text-muted" align="justify">Cynthia Mulindi is a junior student at New York University Abu Dhabi, where she is majoring in Economics with a concentration in Finance and Psychology. Cynthia has taken diverse courses in disciplines such as theatre, music, business and marketing. While studying at NYUAD, she has been involved in the Abu Dhabi community by volunteering at The Future Center for Special Needs, the Filipino Safe House and the Women’s Labor Camp. She believes that the key to eradication of poverty is education, as a good education allows people to acquire the skills they need in order to develop. Thus, being part of CAMA and working with a very passionate team is a chance for her to share her experience and help others attain such an education. In 2015, she interned with the education department at the Rwandan embassy in Washington DC, where she acted as a liaison between the department and Rwandan students in the US. She initiated a program that will help collect the student’s contacts and locations, to ensure that the embassy is able to more easily support them during their study abroad. Cynthia is also interested in learning more about mental health, particularly how culture-specific coping mechanisms may create resiliency and their impact on the recovery time from traumatic events such as war and genocide.
-
- </p>
 
 
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/executive/Sofia.PNG" class="img-responsive img-circle" alt="" width="270px" height="270px" >
-                        <h3>Sofia</h3>
-                         <p class="text-muted">United States</p>
-                        <h4>Director of Evaluation & Program Development </h4><br>
-                        <p class="text-muted" align="justify">Sofia, a theater and political science major at NYU Abu Dhabi, is a passionate dancer and
-				yogi and a firm believer in the
-				transformative power of education. In 2011, she departed Chicago, IL to complete her final two years of high school at
-				the Waterford Kamhlaba United World College of Southern Africa (UWCSA). Her experience in Swaziland invigorated her
-				passion for education and service, and showed her the value of bringing together diverse individuals. At
-				NYU Abu Dhabi, Sofia has served as the Officer of Communications in Student Government and interned with both the
-				Office of Spiritual Life and Intercultural Education and the Office of Community Outreach. In 2015, Sofia received
-				the Dalai Lama Fellowship and co-founded the Girls’ Education Network, a leadership development program for young girls.
-				She has also studied and spent time in Kampala and Accra. In the future, she aims to serve at the intersection of
-				education and equity and explore how meaningful dialogue can serve as a powerful catalyst for individual and community
-				learning. </p>
+<div class="card-container">
+                 <!-- For Loop To Stored output THE Mentors -->
+ <% for(var counter = 0 ; counter < executiveBoardList.length ; counter++ ) { %>
 
+   <div class="" style="width: 33%; margin-left:0%; display:inline-block; margin-bottom:2%; margin-top:0.5%;">
 
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/executive/Vongai2.PNG" class="img-responsive img-circle" alt="" width="270px" height="270px" >
-                        <h3>Vongai</h3>
-                        <p class="text-muted">Zimbabwe</p>
-                        <h4>Director of Curriculum Development</h4><br><br>
-                        <p class="text-muted" align="justify">Vongai is a Biology major on a Pre-Medical Track at New York University Abu Dhabi.
-				Her love of life sciences and her extracurricular interests intersect around a common theme: education.
-				She believes that education is a force that can empower and produce long-lasting change.
-				She has worked in a broad range of settings that have affirmed this belief; from a volunteer pre-school teacher in the Philippines to a facilitator in a Leadership Development Series for young girls in Abu Dhabi.
-				In these experiences, she enjoyed being able to help others develop the tools they need to cultivate their own dreams and aspirations.
-				She recognizes that her passion to be involved in education was fostered by the wonderful mentors she had as a teenager which is why CAMA is a personal project for her and a way in which she can give back to other African students who may be facing barriers in their academic trajectory. In her free time, Vongai enjoys composing poetry and short stories, running and having a good debate about almost anything.</p>
+       <div class="card-container" style=" padding:5%;" >
 
-                    </div>
-                </div>
-            </div>
-			<div class="row">
-				<div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/executive/Pearl.jpg" class="img-responsive img-circle" alt="" width="270px" height="270px">
-                        <h3>Pearl</h3>
-                        <p class="text-muted">Zimbabwe</p>
-                        <h4>Director of Web Development, Outreach & Engagement </h4><br>
-                        <p class="text-muted" align ="justify">Pearl is a Computer Engineering student at New York University Abu Dhabi.
-				He has a strong passion for programming and facilitating intercultural communication. Pearl believes the major key to
-				positive change in society is the education of young people. To teach young people to think independently and innovatively, and
-				for them to overcome the differences in each other’s religions, ethnic backgrounds and traditions.
-				In 2013, Pearl worked as a facilitator with Lead Us Today, an organization that provides leadership and
-				entrepreneurial training to high school students in Bulawayo, Zimbabwe. At NYUAD,he has worked with the Office of Spiritual
-				Life and Intercultural Education as a Sustained Dialogue Ambassador. </p>
+           <img class="card-img-top img-responsive img-circle" src="<%= executiveBoardList[counter].image %>" width="260px" height="260px" alt="Card image cap">
 
-                    </div>
-                </div>
-				<div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/executive/Gladys2.PNG" class="img-responsive img-circle" alt="" width="268px" height="268px" >
-                        <h3>Gladys</h3>
-                        <p class="text-muted">Zimbabwe</p>
-                        <h4>Director of Admissions</h4><br><br>
-                        <p class="text-muted" align="justify">Gladys Tarisai Mwedzi is a young 19 year old girl from the second capital of Zimbabwe, Bulawayo.
-				She is an aspiring Aerospace Engineer and her dream to someday work at NASA is being cultivated at NYU Abu Dhabi where she is currently pursuing
-				a bachelors degree in Mechanical Engineering. She is most passionate about giving back in any way she can. The girl child is most dear
-				to her and she is currently heading two charity organizations from Bulawayo which help raise funding for students to stay in school and
-				help empower  the girl child respectively. She is a huge fan of EDM, music is life for her and dancing makes her happy. To be part of CAMA for her means that
-				she gets the opportunity to help make another African student's dream a reality, something that someone helped her do when she applied and got accepted to NYUAD.</p>
-                    </div>
-                </div>
-				<div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/executive/Touba2.PNG" class="img-responsive img-circle" alt="" width="253px" height="253px" >
-                        <h3>Touba</h3>
-                        <p class="text-muted">The Gambia</p>
-                        <h4>Director of Communications</h4><br><br>
-                        <p class="text-muted" align="justify">Touba is doing a Mathematics major and an Economics minor at NYU Abu Dhabi. His love for financial engineering is the motivation behind his BS in Mathematics. Touba has some experience in a range of career work, from NYUAD Political Science Department, the Gambia Bureau of Statistics, to Brightstone Middle East. More so, Touba Marrie believes in learning new things and to him, one can learn anytime, anywhere. As a result, he is both inquisitive and creative.
-He is also a youth advocator. He is an active member of National child and Youth Advisory Board. In 2011, he participated in a summer camp called Child Fund International organized by the Youth Ambassadors of Peace in The Gambia. At the camp he learnt about peace and conflict management, drug awareness and crime resistance.
-Marrie has been a peer health educator too. He never relents in his efforts to educate his colleagues about the effects of teenage pregnancy, early marriage, HIV and AIDS, and Malaria. He has indeed helped change the lives of many. Being part of an initiative that aims to help young people has always been Touba's dream. College has been a wonderful experience for him and he would like to share this experience with the many who could learn from it.
-</p>
+               <div class="card-body">
+                   <h4> <%=executiveBoardList[counter].name %> </h4>
+                   <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
+                   <strong><h4><%= executiveBoardList[counter].responsibility %></h4></strong>
+                   <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
 
-                    </div>
-                </div>
-            </div>
+                     <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
+                     <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#<%= executiveBoardList[counter].name %>">Read More</button>
+                     <div id="<%= executiveBoardList[counter].name %>" class="collapse">
+                       <p align="justify"><%= executiveBoardList[counter].bio %></p>
+                     </div>
 
-</section>
+                     <% } %>
+               </div>
+       </div>
+
+   </div>
+
+<% }  %>
+
+</div>
 
 <% include ./partials/footer %>
