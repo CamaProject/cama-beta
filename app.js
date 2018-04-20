@@ -153,6 +153,7 @@ app.get("/contactus", function(req, res){
 app.post("/subscribed", function(req, res){
 
 //**** Adding Email To MAIL Chimp ****//
+/*
 var options = { method: 'POST',
   url: 'https://us18.api.mailchimp.com/3.0/lists/4dae1f7e1d/members',
   headers:
@@ -168,7 +169,7 @@ request(options, function (error, response, body) {
 
   console.log(body);
 });
-
+*/
 
 res.redirect("/");
 
