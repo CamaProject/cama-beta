@@ -77,8 +77,9 @@ footer{
 
 .subscribe{
   background-color: inherit;
-  border-radius: 10px;
+  border-radius: 0px;
   margin-bottom: 5%;
+  margin-top: 1%;
   background-color: #f2f2f2;
 }
 

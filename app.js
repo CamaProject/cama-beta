@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
+var bodyParser = require("body-parser");
+var request = require("request");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //******** Adding Mentors Data ********//
@@ -54,7 +57,6 @@ var mentorList = [
 {name:"Jessica", country:"Nigeria",position:"previous", bio:"Jessica is a junior majoring in Social Research and Public Policy with a minor in Economics. She developed a passion for helping young people achieve their dreams when she worked with students at Brainfield Schools, Nigeria. As a freshman at NYUAD, she was a co-facilitator of Girls' Education Network. Jessica is grateful for an opportunity of studying abroad and wants to give back by guiding high school students. She is currently a Resident Assistant (RA) at NYUAD and has also gained experience by working with the NYUAD office of Public Affairs and NYUAD Career Development Center. Jessica is keen on becoming a consultant and has stepped onto her career path with internships at Select Training and Management Consultancy (UAE) as well as South African Renewable Energy Business Incubator (South Africa).", image:"img/mentors/jessica.PNG"}
 
 
-
 ];
 
 
@@ -73,6 +75,7 @@ var executiveBoardList = [
 ];
 
 
+var subscribedMembers = [];
 
 //******** Adding Mentors Data ********//
 
@@ -118,33 +121,69 @@ app.get("/mentors/previous", function(){
 //End of Mentors //
 
 
-//Going To Join
+//Going To Join Cama Comunity
 app.get("/join", function(req, res){
   res.render("join");
 });
 
-
+/*
 //Going to MENTEES
 app.get("/mentees", function(req, res){
   res.render("mentees");
 });
 
-app.get("/mentees/current", function(){
+app.get("/mentees/current", function(req, res){
   res.render("currentMentees");
 });
 
-app.get("/mentees/previous", function(){
+app.get("/mentees/previous", function(req, res){
   res.render("previousMentees");
 });
-
-//End of Mentors //
-
+*/
 
 app.get("/contactus", function(req, res){
   res.render("contact-us");
 });
 
 //*** End of Routes ***//
+
+
+
+//***** To get Email Information from Subscription ****//
+app.post("/subscribed", function(req, res){
+
+//**** Adding Email To MAIL Chimp ****//
+var options = { method: 'POST',
+  url: 'https://us18.api.mailchimp.com/3.0/lists/4dae1f7e1d/members',
+  headers:
+   { 'Postman-Token': 'eccdb955-25df-434f-bc46-6f6d23e81cbf',
+     'Cache-Control': 'no-cache',
+     Authorization: 'Basic YW55c3RyaW5nOmVjNTRjZTFkMjEzMjRiMGM2OGNkZWM4ZDMyYzQyYTdmLXVzMTg=',
+     'Content-Type': 'application/json' },
+  body: { email_address: req.body.email , status: 'subscribed' },
+  json: true };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+
+res.redirect("/");
+
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Deploying Server

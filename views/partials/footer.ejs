@@ -1,25 +1,26 @@
 <!-- Clients Aside -->
   <div class="card subscribe">
-	<div class="modal-dialog modal-newsletter" style="padding:3%; padding-bottom:15%;" >
-			<form action="/" method="post">
+			<form method="POST" action="/subscribed" style="padding:3%; padding-bottom:15%;">
 
 					<div class="icon-box">
 						<i class="glyphicon glyphicon-envelope" style="font-size:30px; margin-left: 45%;"></i>
 					</div>
 
-
 					<h4 style="margin-left: 20%;">Subscribe to our newsletter</h4>
 					<p>Join our subscribers list to get the latest news, updates delivered directly in your inbox.</p>
-					<div class="input-group">
-						<input type="email" class="form-control" placeholder="Enter your email" required>
-						<span class="input-group-btn">
-							<input type="submit" class="btn btn-primary" value="Subscribe">
-						</span>
+
+          <div class="input-group">
+  						<input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+  						<span class="input-group-btn">
+  							<input type="submit" class="btn btn-primary" value="Subscribe">
+  						</span>
 					</div>
 
 			</form>
-	</div>
+
 </div>
+
+
 
     <footer>
         <div class="container">
@@ -71,6 +72,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="/js/agency.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 </body>
 
