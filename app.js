@@ -2,11 +2,24 @@ var express = require('express');
 var app = express();
 var bodyParser = require("body-parser");
 var request = require("request");
+var postmark = require("postmark");
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport('smtps://'+process.env.EMAIL+'%40gmail.com:'+process.env.PASSWORD+'@smtp.gmail.com');
+
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var client = new postmark.Client("<server key>");
+
+client.sendEmail({
+    "From": "donotreply@example.com",
+    "To": "target@example.us",
+    "Subject": "Test",
+    "TextBody": "Test Message"
+});
 
 //******** Adding Mentors Data ********//
 
@@ -178,18 +191,26 @@ res.redirect("/");
 });
 
 
+app.post("/contactus", function(req, res){
+
+var mailOptions = {
+  from: req.body.senderemail,
+  to: 'pim219@nyu.edu',
+  subject: req.body.senderSubject,
+  text: 'Name:'+req.body.firstname+req.body.lastname+"  "+req.body.senderText
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent successfully');
+  }
+
+});
 
 
-
-
-
-
-
-//
-//
-console.log(process.env.LISTID);
-console.log(process.env.POSTMANTOKEN);
-console.log(process.env.AUTORIZATION);
+});
 
 
 //Deploying Server
