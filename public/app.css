@@ -59,9 +59,19 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.card-container-executives{
+  width: 90%;
+  margin: 0 auto 0 auto;
+  margin-top: 3%;
+  margin-left: 19%;
+}
+
 .card-container{
   width: 90%;
   margin: 0 auto 0 auto;
+  margin-top: 5%;
+  
+
 }
 
 .mentors-row-container{
@@ -90,4 +100,13 @@ margin-left: 27%;
 margin-top: 5%;
 margin-bottom: 5%;
 
+}
+.col-custom-three {
+    position: relative;
+    float: left;
+    width: 40%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 3%;
 }

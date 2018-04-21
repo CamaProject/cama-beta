@@ -6,6 +6,7 @@
             <div class="intro-text">
                 <div class="intro-heading" style="font-size:60px; margin-bottom: 2%;">COLLEGE ADMISSIONS MENTORS FOR AFRICA</div>
             </div>
+        </div>
     </header>
 
 
@@ -18,49 +19,55 @@
                 </div>
             </div>
 
+ <div class="card-container">
+                  <!-- For Loop To Stored output THE Mentors -->
+ <div class="row">
+  <% for(var counter = 0 ; counter < executiveBoardList.length ; counter++ ) { %>
 
-<div class="card-container">
-                 <!-- For Loop To Stored output THE Mentors -->
- <% for(var counter = 0 ; counter < executiveBoardList.length ; counter++ ) { %>
+    <div class="col-md-4" style="margin-bottom:5%;">
 
+        <div class="card-container" style=" padding:5%;" >
+          <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%;">
 
+                <div class="card-body">
+                    <h4> <%=executiveBoardList[counter].name %> </h4>
+                    <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
 
-   <div class="" style="width: 33%; margin-left:0%; display:inline-block; margin-bottom:2%; margin-top:0.5%;">
+                    <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
 
-       <div class="card-container" style=" padding:5%;" >
+                      <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" id="buttonny" data-toggle="modal" data-target="#<%= executiveBoardList[counter].name %>">
+                        Read All
+                      </button>
 
-           <img class="card-img-top img-responsive img-circle" src="<%= executiveBoardList[counter].image %>" width="260px" height="260px" alt="Card image cap">
+                      <!-- Modal -->
+                      <div class="modal fade" id="<%= executiveBoardList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
 
-               <div class="card-body">
-                   <h4> <%=executiveBoardList[counter].name %> </h4>
-                   <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
-                   <strong><h4><%= executiveBoardList[counter].responsibility %></h4></strong>
-                   <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
+                              <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= executiveBoardList[counter].name %></h5>
 
-                     <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
+                            </div>
+                            <div class="modal-body">
+                              <p align="justify"><%= executiveBoardList[counter].bio %></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                     <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#<%= executiveBoardList[counter].name %>">Read All</button>
-                     <div id="<%= executiveBoardList[counter].name %>" class="collapse">
-                       <p align="justify"><%= executiveBoardList[counter].bio %></p>
-                     </div>
+                      <% } %>
+                </div>
+        </div>
 
-                     <% } %>
-               </div>
-       </div>
+    </div>
 
+ <% }  %>
 
-
-
-   </div>
-
-<% }  %>
-
-</div>
-
-
-
-
-
+ </div>
+ </div>
 
 
 
