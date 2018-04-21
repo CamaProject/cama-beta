@@ -195,19 +195,21 @@ app.post("/contactus", function(req, res){
 
 var mailOptions = {
   from: req.body.senderemail,
-  to: 'pim219@nyu.edu',
+  to: 'patrick.inshuti@gmail.com',
   subject: req.body.senderSubject,
-  text: 'Name:'+req.body.firstname+req.body.lastname+"  "+req.body.senderText
+  text:req.body.senderText,
+  html:req.body.senderText
+
 };
 
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
+transporter.sendMail(mailOptions,function(error, info){
+  if(error){
+    console.log("Error sending mail");
     res.redirect("/contactus");
-    
-  } else {
-    console.log('Email sent successfully');
   }
-
+  else{
+    res.redirect("/");
+  }
 });
 
     });
