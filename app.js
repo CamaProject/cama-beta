@@ -157,29 +157,12 @@ app.post("/subscribed", function(req, res){
 
 //**** Adding Email To MAIL Chimp ****//
 
-/*var options = { method: 'POST',
+var options = { method: 'POST',
   url: 'https://us18.api.mailchimp.com/3.0/lists/'+process.env.LISTID+'/members',
   headers:
    { 'Postman-Token': process.env.POSTMANTOKEN,
      'Cache-Control': 'no-cache',
      Authorization: process.env.AUTORIZATION+'=',
-     'Content-Type': 'application/json' },
-  body: { email_address: 'vhnv@k.com', status: 'subscribed' },
-  json: true };
-
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
-
-  console.log(body);
-}); */
-
-
-var options = { method: 'POST',
-  url: 'https://us18.api.mailchimp.com/3.0/lists/4dae1f7e1d/members',
-  headers:
-   { 'Postman-Token': '67ebcedb-7c2a-4690-9e6b-91556c2c053f',
-     'Cache-Control': 'no-cache',
-     Authorization: 'Basic YW55c3RyaW5nOjE3NWM1MDRlYjYzYWVlOWNiZjcxODBhMzVkNDVmNmIxLXVzMTg=',
      'Content-Type': 'application/json' },
   body: { email_address: req.body.email, status: 'subscribed' },
   json: true };
@@ -189,7 +172,6 @@ request(options, function (error, response, body) {
 
   console.log(body);
 });
-
 
 res.redirect("/");
 
