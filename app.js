@@ -181,7 +181,7 @@ var options = { method: 'POST',
      'Cache-Control': 'no-cache',
      Authorization: 'Basic YW55c3RyaW5nOjE3NWM1MDRlYjYzYWVlOWNiZjcxODBhMzVkNDVmNmIxLXVzMTg=',
      'Content-Type': 'application/json' },
-  body: { email_address: 'vhnv@k.com', status: 'subscribed' },
+  body: { email_address: req.body.email, status: 'subscribed' },
   json: true };
 
 request(options, function (error, response, body) {
