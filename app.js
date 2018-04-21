@@ -152,16 +152,19 @@ app.get("/contactus", function(req, res){
 //***** To get Email Information from Subscription ****//
 app.post("/subscribed", function(req, res){
 
+
+
+
 //**** Adding Email To MAIL Chimp ****//
-/*
+
 var options = { method: 'POST',
-  url: 'https://us18.api.mailchimp.com/3.0/lists/4dae1f7e1d/members',
+  url: 'https://us18.api.mailchimp.com/3.0/lists/'+process.env.LISTID+'/members',
   headers:
-   { 'Postman-Token': 'eccdb955-25df-434f-bc46-6f6d23e81cbf',
+   { 'Postman-Token': process.env.POSTMANTOKEN,
      'Cache-Control': 'no-cache',
-     Authorization: 'Basic YW55c3RyaW5nOmVjNTRjZTFkMjEzMjRiMGM2OGNkZWM4ZDMyYzQyYTdmLXVzMTg=',
+     Authorization: process.env.AUTORIZATION+'=',
      'Content-Type': 'application/json' },
-  body: { email_address: req.body.email , status: 'subscribed' },
+  body: { email_address: 'vhnv@k.com', status: 'subscribed' },
   json: true };
 
 request(options, function (error, response, body) {
@@ -169,7 +172,8 @@ request(options, function (error, response, body) {
 
   console.log(body);
 });
-*/
+
+
 
 res.redirect("/");
 
@@ -183,8 +187,11 @@ res.redirect("/");
 
 
 
-
-
+//
+//
+console.log(process.env.LISTID);
+console.log(process.env.POSTMANTOKEN);
+console.log(process.env.AUTORIZATION);
 
 
 //Deploying Server
