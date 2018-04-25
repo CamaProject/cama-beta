@@ -1,15 +1,14 @@
 var express = require('express');
 var app = express();
+app.use(express.static(__dirname + '/public'));
 var bodyParser = require("body-parser");
 var request = require("request");
 var postmark = require("postmark");
 var nodemailer = require('nodemailer');
-
 var transporter = nodemailer.createTransport('smtps://'+process.env.EMAIL+'%40gmail.com:'+process.env.PASSWORD+'@smtp.gmail.com');
 
 
 app.set("view engine", "ejs");
-app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var client = new postmark.Client("<server key>");
@@ -97,7 +96,7 @@ var executiveBoardList = [
 
   {name:"Shaima", country:"Sudan",responsibility:"Director of Admissions", position:"executive", bio:"Shaima Abdalla Ahmed is pursuing a double major in Economics and Political Science. She lived her entire life in Khartoum, Sudan, and has spent the last few years of high school focusing on educational programmes, for girls and for university students. Her experience in Sudan has furthered her passion for providing opportunities and facilitating resources to allow students to attain the education that she was fortunate enough to have. CAMA allows Shaima to be able to achieve those goals and help her fellow African students achieve theirs! Shaima has always been a proud member of the MUN society throughout high school and supported the local poetry scene in her hometown.", image:"img/executive/Shaima.JPG"},
 
-  {name:"Edie", country:"China",responsibility:"Director of Program Development", position:"executive", bio:"Edie is a sophomore in New York University Abu Dhabi majoring in Theatre. She has been practicing ballet and hip-hop for 15 years. She loves sports like Scuba diving. Passionate about empowering women and helping develop education availability, I have served as the Student Performing Arts Director in International Women’s Academy for 5 years. I hope to bring my expertise in remote mentorship to CAMA. Please do not hesitate to ask any question about College application.", image:"img/executive/Edie.jpg"}
+  {name:"Edie", country:"China",responsibility:"Director of Program Development", position:"executive", bio:"Edie is a sophomore in New York University Abu Dhabi majoring in Theatre. She has been practicing ballet and hip-hop for 15 years. She loves sports like Scuba diving. Passionate about empowering women and helping develop education availability, She has served as the Student Performing Arts Director in International Women’s Academy for 5 years. She hopes to bring her expertise in remote mentorship to CAMA. Please do not hesitate to ask any question about College application.", image:"img/executive/Edie.jpg"}
 ];
 
 
