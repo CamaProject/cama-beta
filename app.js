@@ -5,20 +5,11 @@ var bodyParser = require("body-parser");
 var request = require("request");
 var postmark = require("postmark");
 var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport('smtps://'+process.env.EMAIL+'%40gmail.com:'+process.env.PASSWORD+'@smtp.gmail.com');
+//var transporter = nodemailer.createTransport('smtps://'+process.env.EMAIL+'%40gmail.com:'+process.env.PASSWORD+'@smtp.gmail.com');
 
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
-
-var client = new postmark.Client("<server key>");
-
-client.sendEmail({
-    "From": "donotreply@example.com",
-    "To": "target@example.us",
-    "Subject": "Test",
-    "TextBody": "Test Message"
-});
 
 //******** Adding Mentors Data ********//
 
@@ -202,34 +193,8 @@ res.redirect("/");
 
 });
 
-
-app.post("/contactus", function(req, res)
-{
-
-var mailOptions = {
-  from: req.body.senderemail,
-  to: 'patrick.inshuti@gmail.com',
-  subject: req.body.senderSubject,
-  text:req.body.senderText,
-  html:req.body.senderText
-
-};
-
-transporter.sendMail(mailOptions,function(error, info){
-  if(error){
-    console.log("Error sending mail");
-    res.redirect("/contactus");
-  }
-  else{
-    res.redirect("/");
-  }
-});
-
-    });
-
-
 //Deploying Server
 
 app.listen(process.env.PORT || 3001, function(req, res){
   console.log("Server Up and Running at 3001");
-})
+});
