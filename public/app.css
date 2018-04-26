@@ -70,7 +70,7 @@
   width: 90%;
   margin: 0 auto 0 auto;
   margin-top: 5%;
-  
+
 
 }
 
@@ -90,7 +90,10 @@ footer{
   border-radius: 0px;
   margin-bottom: 5%;
   margin-top: 1%;
-  background-color: #f2f2f2;
+  background-color: #121B1F;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
 }
 
 .contact-container{
@@ -109,4 +112,19 @@ margin-bottom: 5%;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 3%;
+}
+
+.contracts{
+
+  width: 75%;
+  background-color: white;
+  margin-top: 10%;
+
+  padding: 4%;
+  padding-bottom: 6%;
+  color: gray;
+  text-align: center;
+  background-color: #F0F7FA;
+
+
 }

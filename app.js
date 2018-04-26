@@ -142,6 +142,16 @@ app.get("/join", function(req, res){
   res.render("join");
 });
 
+//Going to Mentee Contract
+app.get("/menteeContract",function(req, res){
+ res.render("menteeContract.ejs")
+});
+
+//Going to Mentor Contract
+app.get("/mentorContract",function(req, res){
+ res.render("mentorContract.ejs")
+});
+
 /*
 //Going to MENTEES
 app.get("/mentees", function(req, res){
