@@ -16,8 +16,15 @@
 
          <div class="card-container">
                           <!-- For Loop To Stored output THE Mentors -->
+          <% var StartCounter=0 %>
+          <% var LimitCounter=2 %>
+
+<% for (var i = 0; i<(Math.ceil(mentorList.length/3)); i++) {%>
         <div class="row">
-          <% for(var counter = 0 ; counter <= 2 ; counter++ ) { %>
+
+
+          <% if (LimitCounter < mentorList.length){ %>
+          <% for(var counter = StartCounter ; counter <= LimitCounter ; counter++ ) { %>
 
             <div class="col-md-4" style="margin-bottom:5%;">
 
@@ -25,6 +32,7 @@
                   <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
 
                         <div class="card-body">
+                        <% console.log(counter) %>
                             <h4> <%=mentorList[counter].name %> </h4>
                             <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
 
@@ -55,7 +63,6 @@
                               </div>
 
 
-
                               <% } %>
                         </div>
                 </div>
@@ -63,325 +70,76 @@
             </div>
 
          <% }  %>
+         <% } %>
+
 
        </div>
 
 
-       <div class="row">
-         <% for(var counter = 3 ; counter <=5 ; counter++ ) { %>
-
-           <div class="col-md-4" style="margin-bottom:5%;">
-
-               <div class="card-container" style=" padding:5%;" >
-                 <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
-
-                       <div class="card-body">
-                           <h4> <%=mentorList[counter].name %> </h4>
-                           <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
-
-                           <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
-
-                             <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
-
-                             <!-- Button trigger modal -->
-                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= mentorList[counter].name %>">
-                               Read All
-                             </button>
-
-                             <!-- Modal -->
-                             <div class="modal fade" id="<%= mentorList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
-                               <div class="modal-dialog modal-dialog-centered" role="document">
-                                 <div class="modal-content">
-                                   <div class="modal-header">
-                                     <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                                     <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= mentorList[counter].name %></h5>
-
-                                   </div>
-                                   <div class="modal-body">
-                                     <p align="justify" style="color:black; font-weight:bold;"><%= mentorList[counter].bio %></p>
-                                   </div>
-                                 </div>
-                               </div>
-                             </div>
-
-
-
-                             <% } %>
-                       </div>
-               </div>
-
-           </div>
-
-        <% }  %>
-
-      </div>
+  <% StartCounter= StartCounter+3  %>
+  <% LimitCounter=LimitCounter+3 %>
 
 
 
 
+<% } %>
+
+<% if((mentorList.length)%3 !=0) { %>
+
+<div class="row">
 
 
+  <% for(var counter = 18 ; counter <= 19 ; counter++ ) { %>
 
-      <div class="row">
-        <% for(var counter = 6 ; counter <=8 ; counter++ ) { %>
+    <div class="col-md-4" style="margin-bottom:5%;">
 
-          <div class="col-md-4" style="margin-bottom:5%;">
+        <div class="card-container" style=" padding:5%;" >
+          <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
 
-              <div class="card-container" style=" padding:5%;" >
-                <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
+                <div class="card-body">
+                    <h4> <%=mentorList[counter].name %> </h4>
+                    <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
 
-                      <div class="card-body">
-                          <h4> <%=mentorList[counter].name %> </h4>
-                          <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
+                    <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
 
-                          <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
+                      <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
 
-                            <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= mentorList[counter].name %>">
+                        Read All
+                      </button>
 
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= mentorList[counter].name %>">
-                              Read All
-                            </button>
+                      <!-- Modal -->
+                      <div class="modal fade" id="<%= mentorList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="<%= mentorList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
+                              <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= mentorList[counter].name %></h5>
 
-                                    <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= mentorList[counter].name %></h5>
-
-                                  </div>
-                                  <div class="modal-body">
-                                    <p align="justify" style="color:black; font-weight:bold;"><%= mentorList[counter].bio %></p>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-
-
-
-                            <% } %>
-                      </div>
-              </div>
-
-          </div>
-
-       <% }  %>
-
-     </div>
-
-
-
-     <div class="row">
-       <% for(var counter = 9 ; counter <=11 ; counter++ ) { %>
-
-         <div class="col-md-4" style="margin-bottom:5%;">
-
-             <div class="card-container" style=" padding:5%;" >
-               <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
-
-                     <div class="card-body">
-                         <h4> <%=mentorList[counter].name %> </h4>
-                         <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
-
-                         <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
-
-                           <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
-
-                           <!-- Button trigger modal -->
-                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= mentorList[counter].name %>">
-                             Read All
-                           </button>
-
-                           <!-- Modal -->
-                           <div class="modal fade" id="<%= mentorList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
-                             <div class="modal-dialog modal-dialog-centered" role="document">
-                               <div class="modal-content">
-                                 <div class="modal-header">
-                                   <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                                   <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= mentorList[counter].name %></h5>
-
-                                 </div>
-                                 <div class="modal-body">
-                                   <p align="justify" style="color:black; font-weight:bold;"><%= mentorList[counter].bio %></p>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-
-
-
-                           <% } %>
-                     </div>
-             </div>
-
-         </div>
-
-      <% }  %>
-
-    </div>
-
-
-
-
-
-    <div class="row">
-      <% for(var counter = 12 ; counter <=14 ; counter++ ) { %>
-
-        <div class="col-md-4" style="margin-bottom:5%;">
-
-            <div class="card-container" style=" padding:5%;" >
-              <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
-
-                    <div class="card-body">
-                        <h4> <%=mentorList[counter].name %> </h4>
-                        <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
-
-                        <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
-
-                          <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
-
-                          <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= mentorList[counter].name %>">
-                            Read All
-                          </button>
-
-                          <!-- Modal -->
-                          <div class="modal fade" id="<%= mentorList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                                  <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= mentorList[counter].name %></h5>
-
-                                </div>
-                                <div class="modal-body">
-                                  <p align="justify" style="color:black; font-weight:bold;"><%= mentorList[counter].bio %></p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-                          <% } %>
-                    </div>
-            </div>
-
-        </div>
-
-     <% }  %>
-
-   </div>
-
-
-   <div class="row">
-     <% for(var counter = 15 ; counter <=17 ; counter++ ) { %>
-
-       <div class="col-md-4" style="margin-bottom:5%;">
-
-           <div class="card-container" style=" padding:5%;" >
-             <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
-
-                   <div class="card-body">
-                       <h4> <%=mentorList[counter].name %> </h4>
-                       <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
-
-                       <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
-
-                         <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
-
-                         <!-- Button trigger modal -->
-                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= mentorList[counter].name %>">
-                           Read All
-                         </button>
-
-                         <!-- Modal -->
-                         <div class="modal fade" id="<%= mentorList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
-                           <div class="modal-dialog modal-dialog-centered" role="document">
-                             <div class="modal-content">
-                               <div class="modal-header">
-                                 <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                                 <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= mentorList[counter].name %></h5>
-
-                               </div>
-                               <div class="modal-body">
-                                 <p align="justify" style="color:black; font-weight:bold;"><%= mentorList[counter].bio %></p>
-                               </div>
-                             </div>
-                           </div>
-                         </div>
-
-
-
-                         <% } %>
-                   </div>
-           </div>
-
-       </div>
-
-    <% }  %>
-
-  </div>
-
-
-
-  <div class="row">
-    <% for(var counter = 18 ; counter < mentorList.length ; counter++ ) { %>
-
-      <div class="col-md-4" style="margin-bottom:5%;">
-
-          <div class="card-container" style=" padding:5%;" >
-            <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
-
-                  <div class="card-body">
-                      <h4> <%=mentorList[counter].name %> </h4>
-                      <p class="text-muted"><strong><%= mentorList[counter].country %></strong></p>
-
-                      <% if(mentorList[counter].bio && mentorList[counter].bio.length > 0) { %>
-
-                        <p class="text-muted" align="justify"> <%= mentorList[counter].bio.substring(0, 150) %>.....</p>
-
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= mentorList[counter].name %>">
-                          Read All
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="<%= mentorList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <img class="card-img-top img-circle" src="<%=mentorList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                                <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= mentorList[counter].name %></h5>
-
-                              </div>
-                              <div class="modal-body">
-                                <p align="justify" style="color:black; font-weight:bold;"><%= mentorList[counter].bio %></p>
-                              </div>
+                            <div class="modal-body">
+                              <p align="justify" style="color:black; font-weight:bold;"><%= mentorList[counter].bio %></p>
                             </div>
                           </div>
                         </div>
+                      </div>
+
+
+                      <% } %>
+                </div>
+        </div>
+
+    </div>
+
+ <% }  %>
 
 
 
-                        <% } %>
-                  </div>
-          </div>
+</div>
 
-      </div>
-
-   <% }  %>
-
- </div>
-
+<% } %>
 
         </div>
 </div>

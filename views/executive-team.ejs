@@ -21,8 +21,15 @@
 
  <div class="card-container">
                   <!-- For Loop To Stored output THE Mentors -->
+
+                  <% var StartCounter=0 %>
+                  <% var LimitCounter=2 %>
+
+                  <% for (var i = 0; i<((executiveBoardList.length/3)); i++) {%>
  <div class="row">
-  <% for(var counter = 0 ; counter <=2 ; counter++ ) { %>
+
+  <% for(var counter = StartCounter ; counter <=LimitCounter ; counter++ ) { %>
+    <% if(executiveBoardList[counter].position == "advisory"){ %>
 
     <div class="col-md-4" style="margin-bottom:5%;">
 
@@ -32,7 +39,6 @@
                 <div class="card-body">
                     <h4> <%=executiveBoardList[counter].name %> </h4>
                     <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
-
 
                     <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
 
@@ -66,168 +72,83 @@
     </div>
 
  <% }  %>
+ <% }  %>
+
 
  </div>
 
- <div class="row">
-  <% for(var counter = 3 ; counter <=5 ; counter++ ) { %>
+ <% StartCounter= StartCounter+3  %>
+ <% LimitCounter=LimitCounter+3 %>
 
-    <div class="col-md-4" style="margin-bottom:5%;">
+<% } %>
 
-        <div class="card-container" style=" padding:5%;" >
-          <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="220px" width="200px" alt="Card image cap" style="margin-bottom:10%;">
 
-                <div class="card-body">
-                    <h4> <%=executiveBoardList[counter].name %> </h4>
 
-                    <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
+<% var StartCounter=0 %>
+<% var LimitCounter=2 %>
+<% for (var i = 0; i<(Math.ceil(executiveBoardList.length/3)); i++) {%>
+<div class="row">
 
-                    <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
-                      <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary" id="buttonny" data-toggle="modal" data-target="#<%= executiveBoardList[counter].name %>">
-                        Read All
-                      </button>
+<% for(var counter = StartCounter ; counter <=LimitCounter ; counter++ ) { %>
+<% if(executiveBoardList[counter].position == "executive") { %>
 
-                      <!-- Modal -->
-                      <div class="modal fade" id="<%= executiveBoardList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%)">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="280px" width="250px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
+<div class="col-md-4" style="margin-bottom:5%;">
 
-                              <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= executiveBoardList[counter].name %></h5>
+<div class="card-container" style=" padding:5%;" >
+<img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="220px" width="240px" alt="Card image cap" style="margin-bottom:10%;">
 
-                            </div>
-                            <div class="modal-body">
-                              <p align="justify" style="color:black; font-weight:bold;"><%= executiveBoardList[counter].bio %></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+<div class="card-body">
+  <h4> <%=executiveBoardList[counter].name %> </h4>
+  <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
+  <p style="font-weight:bold;" > <%=executiveBoardList[counter].responsibility %> <p>
 
-                      <% } %>
-                </div>
+
+  <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
+
+    <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" id="buttonny" data-toggle="modal" data-target="#<%= executiveBoardList[counter].name %>">
+      Read All
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="<%= executiveBoardList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%);">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>"  height="280px" width="300px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
+
+            <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= executiveBoardList[counter].name %></h5>
+
+          </div>
+          <div class="modal-body">
+            <p align="justify" style="color:black; font-weight:bold;" ><%= executiveBoardList[counter].bio %></p>
+          </div>
         </div>
-
+      </div>
     </div>
 
- <% }  %>
+    <% } %>
+</div>
+</div>
 
- </div>
+</div>
 
+<% }  %>
 
+<% }  %>
 
- <div class="row">
-
-  <% for(var counter = 6 ; counter <=8 ; counter++ ) { %>
-    <% if(executiveBoardList[counter].position == "executive"){ %>
-
-    <div class="col-md-4" style="margin-bottom:5%;">
-
-        <div class="card-container" style=" padding:5%;" >
-          <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="220px" width="240px" alt="Card image cap" style="margin-bottom:10%;">
-
-                <div class="card-body">
-                    <h4> <%=executiveBoardList[counter].name %> </h4>
-                    <p style="font-weight:bold;" > <%=executiveBoardList[counter].responsibility %> <p>
-
-                    <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
-
-                    <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
-
-                      <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary" id="buttonny" data-toggle="modal" data-target="#<%= executiveBoardList[counter].name %>">
-                        Read All
-                      </button>
-
-                      <!-- Modal -->
-                      <div class="modal fade" id="<%= executiveBoardList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%);">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="280px" width="300px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                              <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= executiveBoardList[counter].name %></h5>
-
-                            </div>
-                            <div class="modal-body">
-                              <p align="justify" style="color:black; font-weight:bold;" ><%= executiveBoardList[counter].bio %></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <% } %>
-                </div>
-        </div>
-
-    </div>
-
- <% }  %>
- <% }  %>
+</div>
 
 
- </div>
+<% StartCounter= StartCounter+3  %>
+<% LimitCounter=LimitCounter+3 %>
 
 
 
 
 
-  <div class="row">
-
-   <% for(var counter = 9 ; counter <=11 ; counter++ ) { %>
-     <% if(executiveBoardList[counter].position == "executive"){ %>
-
-     <div class="col-md-4" style="margin-bottom:5%;">
-
-         <div class="card-container" style=" padding:5%;" >
-           <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="220px" width="240px" alt="Card image cap" style="margin-bottom:10%;">
-
-                 <div class="card-body">
-                     <h4> <%=executiveBoardList[counter].name %> </h4>
-                     <p style="font-weight:bold;" > <%=executiveBoardList[counter].responsibility %> <p>
-
-                     <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
-
-                     <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
-
-                       <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
-                       <!-- Button trigger modal -->
-                       <button type="button" class="btn btn-primary" id="buttonny" data-toggle="modal" data-target="#<%= executiveBoardList[counter].name %>">
-                         Read All
-                       </button>
-
-                       <!-- Modal -->
-                       <div class="modal fade" id="<%= executiveBoardList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%);">
-                         <div class="modal-dialog modal-dialog-centered" role="document">
-                           <div class="modal-content">
-                             <div class="modal-header">
-                               <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="280px" width="300px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                               <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= executiveBoardList[counter].name %></h5>
-
-                             </div>
-                             <div class="modal-body">
-                               <p align="justify" style="color:black; font-weight:bold;" ><%= executiveBoardList[counter].bio %></p>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-
-                       <% } %>
-                 </div>
-         </div>
-
-     </div>
-
-  <% }  %>
-  <% }  %>
-
-
-  </div>
-
+<% } %>
 
 
 

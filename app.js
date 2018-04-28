@@ -100,6 +100,8 @@ var subscribedMembers = [];
 // Going to Index Page (Landing page)
 app.get("/", function(req, res){
   res.render("index",{mentorList:mentorList});
+  console.log(mentorList.length);
+
 });
 
 // Going to Resouces
