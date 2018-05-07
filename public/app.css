@@ -125,6 +125,29 @@ margin-bottom: 5%;
   color: gray;
   text-align: center;
   background-color: #f9f9f9;
+}
 
 
+.application-container{
+
+  margin: 0 auto 0 32%;;
+  margin-top: 10%;
+  width: 50%;
+  padding-bottom: 7%;
+}
+
+.application{
+
+border: none;
+border-bottom: 1px solid #434a52;
+border-radius: 0;
+box-shadow: none;
+outline: none;
+display:block;
+width: 60%;
+
+}
+
+.Application-spacing{
+  margin-bottom: 6%;
 }

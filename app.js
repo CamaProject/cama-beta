@@ -100,7 +100,7 @@ var subscribedMembers = [];
 // Going to Index Page (Landing page)
 app.get("/", function(req, res){
   res.render("index",{mentorList:mentorList});
-  console.log(mentorList.length);
+
 
 });
 
@@ -172,6 +172,12 @@ app.get("/mentees/previous", function(req, res){
 app.get("/contactus", function(req, res){
   res.render("contact-us");
 });
+
+app.get("/application", function(req, res){
+  res.render("mentessApplicationForm");
+});
+
+
 
 //*** End of Routes ***//
 

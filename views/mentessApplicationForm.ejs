@@ -1,0 +1,123 @@
+<% include ./partials/header %>
+<div class="application-container">
+
+<form method="post" action="" role="form">
+
+  <div class="Application-spacing">
+    <label for="firstname">First Name</label>
+    <input type="text" class="application" id="firstname" name="firstname" placeholder="Enter email">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="middlename">Middle Name</label>
+    <input type="text" class="application" id="middlename" name="middlename" placeholder="Middle Name">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="lastname">Last Name *</label>
+    <input type="text" class="application" id="lastname" name="lastname" placeholder="Last Name" required>
+  </div>
+
+  <div class="Application-spacing">
+    <label for="email_address">Email Address *</label>
+    <input type="email" class="application" id="email_address" name="email_address" placeholder="Email address" required>
+  </div>
+
+  <div class="Application-spacing">
+    <label for="phonenumber">Phone Number</label>
+    <input type="text" class="application" id="phonenumber" name="lastname" placeholder="Phone Number">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="gender">Gender</label>
+    <input type="text" class="application" id="gender" name="gender" placeholder="Gender">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="d_o_b">Date of Birth</label>
+    <input type="date" class="application" id="d_o_b" name="d_o_b" placeholder="Date Of Birth">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="country">Country of Residence</label>
+    <input type="text" class="application" id="country" name="country" placeholder="Country of Residence">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="school">Current School</label>
+    <input type="text" class="application" id="school" name="school" placeholder="Name and Country">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="grade">Current high school Grade/Year/</label>
+    <input type="text" class="application" id="grade" name="grade" placeholder="Your Answer">
+  </div>
+
+  <div class="Application-spacing">
+    <label for="graduation_date">High School Graduation Date</label>
+    <input type="date" class="application" id="graduation_date" name="graduation_date" placeholder="High School Graduation Date">
+  </div>
+
+<div class="decision_to_apply_for" style="margin-bottom:6%;">
+<p style="font-weight: bold">Which decision do you want to apply for?</p>
+<span  style="display:block;"><input type="checkbox" id="cb1" value="ED1"> <label for="cb1">Early Decision I</label> </span>
+<span  style="display:block;"><input type="checkbox" id="cb2" value="ED2"> <label for="cb2">Early Decision II</label></span>
+<span  style="display:block;"><input type="checkbox" id="cb3" value="RD"> <label for="cb3">Regular Decision</label></span>
+<span  style="display:block;"><input type="checkbox" id="cb4" value="I dont know"> <label for="cb4">I don't know/I have no idea what these things are</label></span>
+
+</div>
+
+<div class="Application-spacing">
+  <label for="schools_to_apply">List schools you want to apply to</label>
+  <input type="text" class="application" id="schools_to_apply" name="schools_to_apply" placeholder="Schools you want to apply to">
+</div>
+
+<div class="Application-spacing">
+  <label for="schools_to_apply">When do you plan to start college?</label>
+  <input type="date" class="application" id="time_to_start_college" name="graduation_date">
+</div>
+
+<div class="decision_to_apply_for" style="margin-bottom:6%;">
+<p style="font-weight: bold">Will you be applying for financial aid?</p>
+
+<span  style="display:block;">
+  <input type="radio" id="cb1" name="financial_aid" value="Yes">
+  <label for="cb1">Yes</label>
+</span>
+
+<span  style="display:block;">
+  <input type="radio" id="cb2"  name="financial_aid" value="No">
+  <label for="cb2">No</label>
+</span>
+
+<span  style="display:block;">
+  <input type="radio" id="cb3"  name="financial_aid" value="Maybe">
+ <label for="cb3">Maybe</label>
+</span>
+
+</div>
+
+
+<div class="Application-spacing">
+  <label for="schools_to_apply">When do you plan to start college?</label>
+  <input type="date" class="application" id="time_to_start_college" name="graduation_date">
+</div>
+
+
+
+  <div class="">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+
+<% include ./partials/footer %>
