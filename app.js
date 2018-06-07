@@ -97,6 +97,13 @@ var subscribedMembers = [];
 
 //*** Routes ***//
 
+app.get("/.well-known/acme-challenge/OWQm-G4zUTKePMuk6tI2hNz7XHZpHu5OdDwMuXK4TDA", function(req, res){
+
+  res.send("OWQm-G4zUTKePMuk6tI2hNz7XHZpHu5OdDwMuXK4TDA.3Q9rf6ahUvRSbZB_QpuJChg8_zbLjUkXUwLGjOFvpik");
+
+});
+
+
 // Going to Index Page (Landing page)
 app.get("/", function(req, res){
   res.render("index",{mentorList:mentorList});
