@@ -129,7 +129,6 @@ app.get("/advisory", function(req, res){
 });
 
 
-
 //Going to Mentors
 app.get("/mentors", function(req, res){
   res.render("mentors", {mentorList:mentorList});
@@ -192,8 +191,6 @@ app.get("/application", function(req, res){
 
 //***** To get Email Information from Subscription ****//
 app.post("/subscribed", function(req, res){
-
-
 
 
 //**** Adding Email To MAIL Chimp ****//
