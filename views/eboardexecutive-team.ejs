@@ -1,94 +1,60 @@
 <% include ./partials/header %>
 
-    <!-- Header -->
-    <header>
-        <div class="container" style="margin-top: -8%;">
-            <div class="intro-text">
-                <div class="intro-heading" style="font-size:60px; margin-bottom: 2%;">COLLEGE ADMISSIONS MENTORS FOR AFRICA</div>
-            </div>
-        </div>
-    </header>
+<div style="margin-top:8%;" class="container">
 
+<section class="team-section text-center my-5">
 
-    <!-- Team Section -->
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold my-5">The EBoard Team</h2>
+  <!-- Section description -->
+  <p class="grey-text w-responsive mx-auto mb-5">Meet CAMA's Eboard Team.</p>
 
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">THE EBOARD TEAM</h2>
-                    <h3 class="section-subheading text-muted">Meet CAMA's EBoard Team.</h3>
-                </div>
-            </div>
+    <div class="row">
+    <% for (var i = 0; i<((executiveBoardList.length)); i++) {%>
+      <% if(executiveBoardList[i].position == "executive"){ %>
+        <!-- Grid column -->
+        <div class="col-lg-4 col-md-6 mb-md-0 mb-5" style="margin-top:8%;">
+          <div class="avatar mx-auto">
+            <img src="<%=executiveBoardList[i].image%>" class="rounded-circle z-depth-1" alt="Sample avatar">
+          </div>
+          <h6 class="font-weight-bold mt-4 mb-3"><%=executiveBoardList[i].name %></h6>
+          <p class="text-uppercase blue-text"><strong><%=executiveBoardList[i].country %></strong></p>
+          <h6 style="margin-bottom:2%;"class="modal-title" id="exampleModalLongTitle"><strong><%= executiveBoardList[i].responsibility %></strong></h6>
 
- <div class="card-container">
-                  <!-- For Loop To Stored output THE EBOARD Members -->
-                  <% var StartCounter=0 %>
-                  <% var LimitCounter=2 %>
+          <p class="grey-text"> <%= executiveBoardList[i].bio.substring(0, 150) %>.....</p>
 
-                  <% for (var i = 0; i<(Math.ceil(executiveBoardList.length/3)); i++) {%>
- <div class="row">
+      <button class="btn peach-gradient btn-rounded btn-sm" data-toggle="modal" data-target="#<%= executiveBoardList[i].name %>">Read More</button>
 
-  <% for(var counter = StartCounter ; counter <=LimitCounter ; counter++ ) { %>
-<% if(executiveBoardList[counter].position == "executive") { %>
+<!-- Modal -->
+      <div class="modal fade" id="<%= executiveBoardList[i].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="avatar mx-auto">
+                      <img src="<%=executiveBoardList[i].image%>" class="rounded-circle z-depth-1" alt="Sample avatar">
+                    </div>
+                  </div>
 
-    <div class="col-md-4" style="margin-bottom:5%;">
+                  <h6 class="modal-title" id="exampleModalLongTitle"><%= executiveBoardList[i].name %></h6>
 
-        <div class="card-container" style=" padding:5%;" >
-          <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>" height="220px" width="230px" alt="Card image cap" style="margin-bottom:10%;">
-
-                <div class="card-body">
-                    <h4> <%=executiveBoardList[counter].name %> </h4>
-                    <p class="text-muted"><strong><%= executiveBoardList[counter].country %></strong></p>
-                    <p style="font-weight:bold;" > <%=executiveBoardList[counter].responsibility %> <p>
-
-
-                    <% if(executiveBoardList[counter].bio && executiveBoardList[counter].bio.length > 0) { %>
-
-                      <p class="text-muted" align="justify"> <%= executiveBoardList[counter].bio.substring(0, 150) %>.....</p>
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-primary" id="buttonny" data-toggle="modal" data-target="#<%= executiveBoardList[counter].name %>">
-                        Read All
-                      </button>
-
-                      <!-- Modal -->
-                      <div class="modal fade" id="<%= executiveBoardList[counter].name %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="filter: brightness(200%);">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <img class="card-img-top img-circle" src="<%=executiveBoardList[counter].image%>"  height="280px" width="300px" alt="Card image cap" style="margin-bottom:10%; margin-left:25%;">
-
-                              <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left:42%;"><%= executiveBoardList[counter].name %></h5>
-
-                            </div>
-                            <div class="modal-body">
-                              <p align="justify" style="color:black; font-weight:bold;" ><%= executiveBoardList[counter].bio %></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <% } %>
-                </div>
-        </div>
-
+                  <div class="modal-body">
+                      <p align=justify><%= executiveBoardList[i].bio %></p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger btn-rounded" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
+        <!-- Grid column -->
+    <%}%>
+    <%}%>
 
-    <% }  %>
+  </div>
+  <!-- Grid row-->
 
-    <% }  %>
-
- </div>
-
-
- <% StartCounter= StartCounter+3  %>
- <% LimitCounter=LimitCounter+3 %>
-
-
-
-
-
-<% } %>
-
-
+</section>
 </div>
 
 <% include ./partials/footer %>

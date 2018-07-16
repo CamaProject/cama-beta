@@ -1,0 +1,75 @@
+body, html {
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+.bg {
+    /* The image used */
+    background-image: url("/img/sky2.png");
+
+    /* Half height */
+    height: 80%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+h2
+{
+color: white;
+position: relative; /* To place the text on the image*/
+top: 130px; /* The exact location of the text from the top of the image*/
+left: 0; /* Other beautification stuff */
+width: 100%;
+margin-bottom: 500px;
+}
+
+h2.h1-responsive{
+  color: black;
+  position:inherit;
+}
+
+h5{
+  position: relative;
+  color: white;
+  top: 110px;
+}
+
+#intro-button{
+  position: relative;
+  top: 150px;
+}
+
+@media only screen and (max-width:570px) {
+  #intro-button{
+    width: 45%;
+    padding: 13px;
+    top:70px;
+  }
+
+}
+
+
+label{
+  text-align:left;
+}
+
+.top-nav-collapse {
+  background-color: #ffffffff !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+hr{
+  background-color: white;
+  width: 45%;
+}
+
+
+.navbar-light .navbar-nav .nav-link{
+  color:#909090 !important;
+}
