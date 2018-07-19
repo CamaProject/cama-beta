@@ -1,0 +1,57 @@
+<% include ./partials/header %>
+
+<div style="margin-top:10%;" class="container">
+  <div style="padding:0%;" class="row faqs">
+    <div class="col-md-12">
+        <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+            <div class="text-white text-center py-5 px-4 my-5">
+                <div>
+                    <h1 class="card-title pt-3 mb-5 font-bold"><strong>Fequently Asked Questions</strong></h1>
+                    <p class="mx-5 mb-5">Bellow are the most asked questions by both, the aspiring mentors and mentees.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Accordion wrapper-->
+<div style="margin-top:5%;" class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+<% for (var counter= 0 ; counter < frequently_asked_questions.length ; counter++) { %>
+    <!-- Accordion card -->
+    <div class="card">
+
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading<%=counter%>">
+            <a data-toggle="collapse" href="#collapse<%=counter%>" aria-expanded="false" aria-controls="collapseOne">
+                <h3 class="mb-0">
+                    <%=frequently_asked_questions[counter].title %> <i class="fa fa-angle-down rotate-icon"></i>
+                </h3>
+            </a>
+        </div>
+
+        <!-- Card body -->
+        <div id="collapse<%=counter%>" class="collapse" role="tabpanel" aria-labelledby="heading<%=counter%>" data-parent="#accordionEx" >
+            <div class="card-body">
+                <%=frequently_asked_questions[counter].body %>
+            </div>
+        </div>
+    </div>
+    <!-- Accordion card -->
+
+<% } %>
+</div>
+<!--/.Accordion wrapper-->
+
+
+
+</div>
+
+
+
+
+
+
+<% include ./partials/footer %>

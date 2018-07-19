@@ -7,7 +7,7 @@ body, html {
     background-image: url("/img/sky2.png");
 
     /* Half height */
-    height: 80%;
+    height: 78%;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -20,36 +20,112 @@ h2
 {
 color: white;
 position: relative; /* To place the text on the image*/
-top: 130px; /* The exact location of the text from the top of the image*/
+top: 190px; /* The exact location of the text from the top of the image*/
 left: 0; /* Other beautification stuff */
 width: 100%;
 margin-bottom: 500px;
 }
+
+#intro-button{
+  position: relative;
+  top: 200px;
+}
+
+h5{
+  position: relative;
+  color: white;
+  top: 170px;
+}
+
+
+@media only screen and (max-width:570px) {
+  #intro-button{
+    width: 40%;
+    padding: 13px;
+    top:15px;
+  }
+
+  h2{
+    top:50px;
+    font-size: 35px !important;
+  }
+
+  h5{
+    top:30px;
+  }
+
+}
+
+@media only screen and (min-width:319px) and (max-width:650px) {
+  #intro-button{
+    width: 45%;
+    padding: 13.5px;
+    top:-15px;
+  }
+
+  h2{
+    top:20px;
+    font-size: 25px !important;
+  }
+
+  h5{
+    top:15px;
+  }
+
+}
+
+
+@media only screen and (min-width:1280px) and (max-width:1440px) {
+  #intro-button{
+    width: 45%;
+    padding: 13px;
+    top:150px;
+  }
+
+  h2{
+    top:200px;
+
+  }
+
+  h5{
+    top:160px;
+  }
+
+}
+
+
+@media only screen and (min-width:700px) and (max-width:1100px) {
+  #intro-button{
+    width: 45%;
+    padding: 13px;
+    top:150px;
+  }
+
+  h2{
+    top:200px;
+
+  }
+
+  h5{
+    top:160px;
+  }
+
+}
+
+.navbar-light .navbar-nav .nav-link{
+  font-size: 14px;
+}
+
+
+
+
 
 h2.h1-responsive{
   color: black;
   position:inherit;
 }
 
-h5{
-  position: relative;
-  color: white;
-  top: 110px;
-}
 
-#intro-button{
-  position: relative;
-  top: 150px;
-}
-
-@media only screen and (max-width:570px) {
-  #intro-button{
-    width: 45%;
-    padding: 13px;
-    top:70px;
-  }
-
-}
 
 
 label{
@@ -58,6 +134,7 @@ label{
 
 .top-nav-collapse {
   background-color: #ffffffff !important;
+
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -65,11 +142,30 @@ label{
 }
 
 hr{
-  background-color: white;
-  width: 45%;
+  background-color: orange;
+  width: 65%;
 }
 
 
 .navbar-light .navbar-nav .nav-link{
-  color:#909090 !important;
+  color:#888888 !important;
+  font-weight: 600;
+}
+
+@media only screen and (max-width:680px){
+
+  .contracts{
+    width:100% !important;
+  }
+
+  .subscribe-card{
+    width: 90% !important;
+  }
+
+  .faqs{
+    height: 235px;
+    font-size: 15px !important;
+
+  }
+
 }

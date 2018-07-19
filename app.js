@@ -59,16 +59,41 @@ var mentorList = [
 
 {name:"Jessica", country:"Nigeria",position:"previous", bio:"Jessica is a junior majoring in Social Research and Public Policy with a minor in Economics. She developed a passion for helping young people achieve their dreams when she worked with students at Brainfield Schools, Nigeria. As a freshman at NYUAD, she was a co-facilitator of Girls' Education Network. Jessica is grateful for an opportunity of studying abroad and wants to give back by guiding high school students. She is currently a Resident Assistant (RA) at NYUAD and has also gained experience by working with the NYUAD office of Public Affairs and NYUAD Career Development Center. Jessica is keen on becoming a consultant and has stepped onto her career path with internships at Select Training and Management Consultancy (UAE) as well as South African Renewable Energy Business Incubator (South Africa).", image:"img/mentors/previousMentors/jessica.PNG"},
 
-{name:"Songyue", country:"China",position:"current", bio:"Songyue is a senior studying Social Research & Public Policy at New York University Abu Dhabi. Originally from China, she has studied and lived in multiple countries including Ghana, the United States, Britain, and the UAE. She is passionate about entrepreneurships and have had experiences in various industries, including retail, financial advisory, consulting, NGOs, and banking. At school, she has co-directed Girls’ Education Network, a student-initiated organization focusing on women leadership development. She has also organized several major cultural events in collaboration with NYUAD office of Spiritual Life & Intercultural Education. Songyue enjoys scuba diving, loves house music, and has recently found her passion in baseball. Most importantly, she welcomes honest conversations and never has anything to hide. Go talk to her!", image:"img/mentors/currentMentors/SongyueXu.jpg"},
+
+//CURRENT Mentors
+
+{name:"Saif", country:"United Arab Emirates",position:"current", bio:"Saif Almehairi is an Emirati who has lived most of his life in Abu Dhabi, the capital of the United Arab Emirates. He attended Abu Dhabi International Private School as an Advanced American curriculum candidate. He is currently a sophomore at New York University Abu Dhabi pursuing a major in Economics and a double minor in Applied Mathematics and Political Science. Regarding his academic interests, he enjoys studying all of the social sciences as he believes they serve as a bridge between the humanities and the sciences. Outside the classroom, Saif enjoys playing football and traveling. He played in several football clubs, including his high school football team, where he served as captain for most of his playing career. In addition, he has volunteered in those clubs to serve as a coach for the younger players (aged 5-9). Saif is extremely excited to take on this new volunteering opportunity as he believes that his college application process and extensive understanding of the system will serve as an invaluable asset for his assigned mentee/s. He hopes that his mentee/s is excited as he is!", image:"img/mentors/currentMentors/saif.jpg"},
+
+/*
+{name:"Amina", country:"Bosnia",position:"current", bio:"Amina comes from a small heart-shaped land called Bosnia and Herzegovina. She is majoring in Social Research and Public Policy and plans to specialize in Public Health and Anthropology. As someone who comes from a less developed country, education has always been immensely important to her as it has truly been a transformational element in her life. And that is exactly why she wants to contribute and help others in their journey. Throughout her experience, she has been involved in many organizations. She has previously volunteered in SOS Kindergarten as an English language tutor. At NYUAD, she is engaged in Girls Education Network, where she facilitates weekly workshops for young girls from Abu Dhabi. As evidenced by her commitment to service, she finds particular pleasure in doing community work and working with children. She believes this has shaped her into who she is today and constitutes a big part of her identity. She enjoys working with others and being in contact with people because she gets a chance to learn and help others!",image:""},
+*/
+
+/*
+{name:"Atoka Jo", country:"Japan",position:"current", bio:"Atoka Jo is a junior at New York University Abu Dhabi, majoring in Social Research and Public Policy, and minoring in Theater and Interactive Media. Because of her passion in education, she created a summer school for Japanese middle school students to promote active-style and English-based learning in Japan. In Abu Dhabi, she was a facilitator in Girls Education Network, where she helped organize workshops for young girls in Abu Dhabi. In Buenos Aires, she tutored English and Math for children of low-income families and in Accra, she taught Japanese culture, English, and Math at a local Ghanaian public school. She also advocated for education for all during her internship at the United Nations in New York. She hopes to meet courageous young Africans and bring the best out of her mentees through CAMA.", image:""},
+*/
+
+{name:"Munib", country:"Bosnia",position:"current", bio:"Munib Mešinović comes from Travnik, a small town in the middle of Bosnia and Herzegovina, isolated from many kinds of “international” education except the one so many take for granted: the Internet. Through this multifaceted tool, Munib has been able to inform himself of and partake in many opportunities such as volunteering with DEAF (Federal Organization of the Hearing Impaired), absorbing educational materials such as books and videos, as well as applying to colleges such as New York University Abu Dhabi, which he now calls home. In addition to surfing on the Internet for valuable information, Munib spends most of his time reading, swimming, and hiking. However, a particular passion of his has been tutoring and teaching. As a CAMA mentor, he wants to combine this interest with the aforementioned potential of the internet in the hopes of guiding students who are as eager to learn as he is. Munib is currently studying Electrical Engineering and working on a project for the iGEM Bioengineering Competition, in which he is helping to build a cheap, fast, and reliable food-pathogen detection device.", image:"img/mentors/currentMentors/MunibMesinovic.jpg"},
+
+/*
+{name:"Otelo", country:"USA",position:"current", bio:"Otelo Reggy-Beane is a U.S. American second-year student at New York University Abu Dhabi interested in the intersection of community and infrastructure in our cities. He is majoring in Social Research and Public Policy with a minor in Civil Engineering to better understand sustainable and inclusive urban development. His passion for public service inspired him to find opportunities to grow as an advocate of change. Otelo’s focus on urbanization began during a summer internship with a Portland city commissioner where he conducted policy research on affordable housing. He learned about the inequalities affecting many communities of color as well as the importance of equitable representation and participation in government. Since then, Otelo has worked for politicians on both ends of the American ideological spectrum, including the Mayor of Portland, Oregon and the Governor of Utah. When he is not traveling, Otelo enjoys playing basketball, watching binge-worthy Netflix Originals and building his Kenya-based social enterprise, Umoja Beads. In the future, Otelo aspires to be an elected official advocating for and empowering underprivileged communities around the world. Otelo believes higher education has been excellent for his exploration and growth and looks forward to leading students to their full academic potential.", image:""},
+*/
+
+{name:"Maitha", country:"United Arab Emirates",position:"current", bio:"Maitha AlSuwaidi is a political science student at New York University Abu Dhabi (NYUAD). Other than her passion for politics, she also enjoys reading and writing articles, as she writes for Sail E-Magazine. She is evidently passionate about cultural engagement, having interned in the Cultural Engagement Program in NYUAD. She also possesses an undeniable passion for the arts, as she has been actively creating art in addition to interning in NYUAD’s Art Gallery. Having volunteered in an international competition for people with disabilities and participated in the World Travel Market conference representing the UAE alongside many others, Maitha values being an active part of the larger community, by contributing to that community and also benefiting from it through the unique relationships she makes. She views and represents herself as an advocate for mental health awareness, cultural diversity and engagement, and disability activism.", image:"img/mentors/currentMentors/maitha.jpeg"},
 
 
-{name:"Munib", country:"----",position:"current", bio:"------", image:"img/mentors/currentMentors/MunibMesinovic.jpg"},
+/*
+{name:"Amna", country:"United Arab Emirates",position:"current", bio:"Amna is a Sophomore from the United Arab Emirates at New York University Abu Dhabi. She is majoring in Political Science and Art History with a concentration in Legal Studies. Amna enjoys intercultural conversations, music, and art. By the time she graduates, she hopes to gain a better understanding of regional and international politics, the role of culture in the arts, and above all, the UAE’s position in the realm of international relations. After NYUAD, she wishes to continue studying political science and diplomacy, and find a career that will combine her passion for politics, arts, and cultural diversity. Amna also enjoys quiet mornings with a good cup of coffee and an engaging book as well as thought-provoking conversations with her friends.", image:""},
+*/
 
+/*
+{name:"Aya", country:"Morocco",position:"current", bio:"Aya Bouhelal is a sophomore at New York University Abu Dhabi who intends to double major in philosophy and psychology.  Before attending college, she graduated from a Moroccan high school in which she pursued a mostly scientific path. Being aware of how unfamiliar students from the MENA region are with the application process, she made herself available to answer any worries or questions they might have. Over her high school and her freshman years, Aya has often taken part in volunteering programs through which she aimed to share her energy and her knowledge. From assisting the mentally disabled to offering SAT classes to her younger peers, her experience enabled her to meet different people with different needs.  Most of Aya’s hobbies are related to Art.  Aya does photography, in both personal and professional settings. She is also passionate about music. She plays the guitar and recently took up the clarinet.", image:""},
+*/
 
-{name:"Kevin", country:"USA",position:"current", bio:"My name is Kevin Ke, a rising Junior studying at NYU Abu Dhabi, majoring in Theatre and Economics. I was born in the New York countryside before moving to Taiwan soon after, which has been my home ever since. I am particularly interested in exploring experimental movement-based theatre, because it ties into dancing, which is one of my hobbies; additionally, I’m feeling out acting and devising as other potential directions. On campus, I am the former leader of the dance student organization, Attitude, and instruct breakdancing for fellow peers as a weekly class; I am also heading development of dance theory through Body Voices, a partner organization. Other hobbies that I enjoy include choreography, video games, watching theatre, and public speaking. Along with a group of theatre enthusiast friends, I am also a member of an independent theatre-making group, the Theater Collective. Lastly, I also currently work as an Assistant Director for Online Model United Nations, a multinational non-profit organization that aims to bring MUN to students across the world, online. I look forwards to working with CAMA and meeting you!", image:"img/mentors/currentMentors/KevinKe.jpg"}
+{name:"Nadia", country:"USA",position:"current", bio:"Nadia Hussein is a second-year student at New York University Abu Dhabi majoring in Political Science with minors in Legal Studies and Arabic. She is first-generation American of Indian-Guyanese origin, born in New York City and raised in the small town of East Stroudsburg in the state of Pennsylvania. Nadia is interested in social justice and human rights movements both in the U.S. and international context. She intends to pursue a law degree and career involving international human rights law. At NYUAD, she is involved in Students for Justice in Palestine, Africa Global, and currently serves as Co-President of the Muslim Student Association. Apart from her academics, Nadia enjoys playing and watching tennis, listening to music, preferably from different cultures and genres, and exploring different restaurants and cuisines. Her interests also include fashion, pop culture, comedy - especially political satire - reading the news, and catching up with current events. ", image:"img/mentors/currentMentors/nadia.jpg"},
 
+{name:"Songyue", country:"China",position:"current", bio:"Songyue is a senior studying Social Research & Public Policy at New York University Abu Dhabi (NYUAD). Originally from China, she has studied and lived in multiple countries including Ghana, the United States, Britain, and the UAE. She is passionate about entrepreneurship and has had experiences in various industries, including retail, financial advisory, consulting, NGOs, and banking. At school, she has co-directed Girls’ Education Network, a student-initiated organization focusing on women leadership development. She has also organized several major cultural events in collaboration with NYUAD office of Spiritual Life & Intercultural Education. Songyue enjoys scuba diving, loves house music, and has recently found her passion in baseball. Most importantly, she welcomes honest conversations and never has anything to hide. Go talk to her!", image:"img/mentors/currentMentors/SongyueXu.jpg"},
 
-
+{name:"Kevin", country:"Taiwan",position:"current", bio:"Kevin Ke is a rising Junior studying at NYU Abu Dhabi, majoring in Theatre and Economics. He was born in the countryside of New York before moving to Taiwan soon after, which has been his home ever since. He is particularly interested in exploring experimental movement-based theatre, because it ties into dancing, which is one of his hobbies. Additionally, he is trying out acting and devising as other potential directions. On campus, Kevin led the dance student organization, Attitude, and instructed a weekly breakdancing class for fellow peers. He is also pioneering the development of dance theory through Body Voices, a partner organization that focuses on movement as communication. Along with a group of theatre enthusiast friends, he is also a member of an independent theatre-making group, the Theater Collective. Lastly, he currently works as an Assistant Director for Online Model United Nations, a multinational non-profit organization that aims to bring MUN to students across the world, online. Other hobbies that he enjoys include choreography, video games, watching theatre, and public speaking. He look forwards to working with CAMA and meeting you!", image:"/img/mentors/currentMentors/KevinKe.jpg"}
 
 
 ];
@@ -102,7 +127,29 @@ var executiveBoardList = [
 ];
 
 
-var subscribedMembers = [];
+var frequently_asked_questions = [
+
+{title:"Collapsible Group Item #1", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #2", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #2", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #4", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #5", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #6", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #7", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #8", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #9", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." },
+
+{title:"Collapsible Group Item #10", body:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS." }
+
+];
 
 //******** Adding Mentors Data ********//
 
@@ -125,6 +172,24 @@ app.get("/", function(req, res){
 // Going to Resouces
 app.get("/resources", function(req, res){
   res.render("resources");
+});
+
+
+//Going to FAQ
+
+app.get("/faq", function(req, res){
+  res.render("faq",{frequently_asked_questions:frequently_asked_questions});
+});
+
+
+//Privacy Policy and Terms of use
+
+app.get("/privacy_policy", function(req, res){
+  res.render("privacy_policy");
+});
+
+app.get("/terms_of_use", function(req,res){
+  res.render("terms_of_use");
 });
 
 
@@ -203,7 +268,11 @@ app.post("/subscribed", function(req, res){
 
 //**** Adding Email To MAIL Chimp ****//
 
-var options = { method: 'POST',
+var options =
+
+  {
+
+  method: 'POST',
   url: 'https://us18.api.mailchimp.com/3.0/lists/'+process.env.LISTID+'/members',
   headers:
    { 'Postman-Token': process.env.POSTMANTOKEN,
@@ -211,7 +280,9 @@ var options = { method: 'POST',
      Authorization: process.env.AUTORIZATION+'=',
      'Content-Type': 'application/json' },
   body: { email_address: req.body.email, status: 'subscribed' },
-  json: true };
+  json: true
+
+};
 
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
@@ -240,6 +311,6 @@ app.get('*', function(req, res){
 });
 //Deploying Server
 
-app.listen(process.env.PORT || 3003, function(req, res){
-  console.log("Server Up and Running at 3003");
+app.listen(process.env.PORT || 3001, function(req, res){
+  console.log("Server Up and Running at 3001");
 });
