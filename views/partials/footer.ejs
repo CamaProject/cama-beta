@@ -1,6 +1,6 @@
 <!-- Card -->
 <div style="margin-top:5%;" align="center">
-<div style="width:70%;" class="card col-lg-5 col-md-6 col-sm-6 col-xl-7 subscribe-card">
+<div style="width:45%;" class="card col-lg-5 col-md-6 col-sm-6 col-xl-7 subscribe-card">
 
     <!-- Card body -->
     <div class="card-body">
@@ -61,13 +61,64 @@
 
 
     <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+
+if ($(window).width() < 680) {
+
+  //HOVER dropdown JQuery
+
+}
+
+else{
+
+
+  $("#mentorDropdown").hover(
+      function() {
+          $('#mentorDropdownul').slideDown(1);
+      },
+      function() {
+          $('#mentorDropdownul').slideUp(1);
+      }
+  );
+
+  $("#boardDropdown").hover(
+    function(){
+      $('#boardDropdownul').slideDown(1);
+    },
+    function(){
+      $('#boardDropdownul').slideUp(1);
+    }
+  );
+
+  $('#resourcesDropdown').hover(
+    function(){
+      $('#resourcesDropdownul').slideDown(1);
+    },
+    function(){
+      $('#resourcesDropdownul').slideUp(1);
+    }
+  );
+
+}
+
+});
+
+</script>
+
+
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+
+
 
 </body>
 
