@@ -302,9 +302,29 @@ app.get("/application", function(req, res){
 //***** To get Email Information from Subscription ****//
 app.post("/subscribed", function(req, res){
 
+/////******Fetch API*******////
 
-//**** Adding Email To MAIL Chimp ****//
+fetch({
 
+  method: 'POST',
+  url: 'https://us18.api.mailchimp.com/3.0/lists/'+process.env.LISTID+'/members',
+  headers:
+   { 'Postman-Token': process.env.POSTMANTOKEN,
+     'Cache-Control': 'no-cache',
+     Authorization: process.env.AUTORIZATION+'=',
+     'Content-Type': 'application/json' },
+  body: { email_address: req.body.email, status: 'subscribed' },
+  json: true
+
+}).then(function(){
+
+  request(options, function (error, response, body) {
+    if (error) throw new Error(error);
+
+})
+
+/*
+Adding Email To MAIL Chimp
 var options =
 
   {
@@ -330,6 +350,9 @@ request(options, function (error, response, body) {
 res.redirect("/");
 
 });
+
+
+*/
 
 //****** Routes TO Download Mentees and Mentors Contracts ******//
 app.get('/Contracts/MenteeContract.pdf', function(req, res){
