@@ -322,6 +322,7 @@ fetch({
     if (error) throw new Error(error);
 
 })
+});
 
 /*
 Adding Email To MAIL Chimp
