@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //******** Adding Mentors Data ********//
 
-//Storing Mentors as Objects in Array -- Soon to be replaced by a database
+//Storing Mentors as Objects in Array -- Soon to be replaced by a Mongo database
 
 var mentorList = [
 { name:"Sharon", country:"Canada", position:"previous",  bio:"Sharon is a biology major specializing in the neurosciences at New York University Abu Dhabi. She was born in China but has called Toronto, Canada home for most of her life. Besides the neurosciences, she also has an interest in genetics, and for her senior thesis, she is researching genes conferring drug resistance in the malaria parasite in Burkina Faso. She also enjoys reading and learning languages, and has thus completed minors in literature and in French studies. At NYUAD, she serves as a peer tutor in the Writing Centre, an intern in the Dean of Students’ Office, and as a leader for several student groups including Abu Dhabi Christian Fellowship, Attitude Dance Society, and Women Empowered in STEM. She loves working with others and building community through volunteering, organizing events, and establishing friendships across cultural and linguistic boundaries. She looks forward to serving as a mentor with CAMA", image:"img/mentors/previousMentors/sharon.PNG"},
